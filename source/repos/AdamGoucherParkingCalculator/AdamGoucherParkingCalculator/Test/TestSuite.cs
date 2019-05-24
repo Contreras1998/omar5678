@@ -112,6 +112,14 @@ namespace AdamGoucherParkingCalculator.Test
                 Console.WriteLine("Assertion failed");
             }
             
+
+        }
+
+        [Test, Order(4)]
+        public void getAPrice()
+        {
+            parkingCalculatorHomepage.userSelectShort_TermLot();
         }
     }
+
 }
