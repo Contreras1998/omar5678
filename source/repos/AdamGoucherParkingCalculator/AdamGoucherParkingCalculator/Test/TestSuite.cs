@@ -120,6 +120,13 @@ namespace AdamGoucherParkingCalculator.Test
         {
             parkingCalculatorHomepage.userSelectShort_TermLot();
         }
+
+        [Test, Order(5)]
+        public void changeEntryTime()
+        {
+            parkingCalculatorHomepage.userSelectShort_TermLot();
+            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeField("10:00");
+        }
     }
 
 }
