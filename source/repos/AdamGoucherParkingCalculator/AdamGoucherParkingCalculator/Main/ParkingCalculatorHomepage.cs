@@ -117,6 +117,9 @@ namespace AdamGoucherParkingCalculator.Main
         {
             selectValue_ByVisibleText(_choose_a_LotDropDown, ("Short-Term Parking"));
         }
-
+        public void feedBoard()
+        {
+            Console.Write("omar");
+        }
     }
 }
