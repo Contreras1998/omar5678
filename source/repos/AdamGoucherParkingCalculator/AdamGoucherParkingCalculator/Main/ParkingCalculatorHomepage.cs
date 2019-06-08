@@ -121,5 +121,10 @@ namespace AdamGoucherParkingCalculator.Main
         {
             Console.Write("omar");
         }
+
+        public void customBoaard()
+        {
+            Console.WriteLine("Practice");
+        }
     }
 }
