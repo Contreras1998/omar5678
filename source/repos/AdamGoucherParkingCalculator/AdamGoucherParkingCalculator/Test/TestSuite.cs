@@ -195,6 +195,29 @@ namespace AdamGoucherParkingCalculator.Test
 
 
         }
+
+
+        [Test, Order(11)]
+        public void AddNotesLink()
+        {
+            clickElementMethod(By.Id("menu1"));
+            IList<IWebElement> ifConditionalDropdownMenu = driver.FindElements(By.XPath("(//ul[@class='dropdown-menu test'])[1]"));
+            List<string> actualOrder = new List<string>();
+
+            foreach (IWebElement ele in ifConditionalDropdownMenu)
+            {
+                if (ele.Text == "CSS")
+                {
+                    ele.Click();
+                }
+
+            }
+            Console.WriteLine(ifConditionalDropdownMenu.Count);
+            Console.WriteLine("test1");
+
+
+
+        }
     }
 
 }
