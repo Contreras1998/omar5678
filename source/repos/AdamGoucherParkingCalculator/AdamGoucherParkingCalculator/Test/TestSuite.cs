@@ -22,9 +22,9 @@ namespace AdamGoucherParkingCalculator.Test
         public void when_User_fill_all_the_Fields_Corretly_User_should_be_able_to_get_a_price()
         {          
                 parkingCalculatorHomepage.user_Select_a_Lot_from_dropdown();
-                parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeField("12:00");
+                parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeFieldMethod("12:00");
                 parkingCalculatorHomepage.user_Click_on_EntryTime_AM_Button();
-                parkingCalculatorHomepage.user_Input_EntryDate_on_ChooseEntryDateandTimeField();
+                parkingCalculatorHomepage.user_Input_EntryDate_on_ChooseEntryDateandTimeFieldMethod();
                 parkingCalculatorHomepage.user_input_ExitTime_on_ChooseLeavingDateandTimeField("19:00");
                 parkingCalculatorHomepage.user_Click_on_ExitTime_PM_RadioButton();
                 parkingCalculatorHomepage.user_input_ExitDate_on_ChooseLeavingDateandTimeField();
@@ -53,8 +53,8 @@ namespace AdamGoucherParkingCalculator.Test
             /* Each method contains the behaviour to perform the action on the browser 
             so we just need to call them. */
             parkingCalculatorHomepage.user_Select_a_Lot_from_dropdown();
-            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeField("16:00");
-            parkingCalculatorHomepage.user_click_on_EntryTime_PM_RadioButton();
+            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeFieldMethod("16:00");
+            parkingCalculatorHomepage.user_click_on_EntryTime_PM_RadioButtonMethod();
             parkingCalculatorHomepage.user_Click_OnEntryDate_CalendarIcon();
             parkingCalculatorHomepage.user_input_ExitTime_on_ChooseLeavingDateandTimeField("19:00");
             parkingCalculatorHomepage.user_Click_on_ExitTime_PM_RadioButton();
@@ -95,9 +95,9 @@ namespace AdamGoucherParkingCalculator.Test
         public void VerifythatWhenExitDateortimeisbeforeUserEntrydateortimeInput_SystemshoulddisplayAwarningmessage()
         {
             parkingCalculatorHomepage.userSelectShort_TermLot();
-            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeField("20:00");
-            parkingCalculatorHomepage.user_click_on_EntryTime_PM_RadioButton();
-            parkingCalculatorHomepage.user_Input_EntryDate_on_ChooseEntryDateandTimeField();
+            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeFieldMethod("20:00");
+            parkingCalculatorHomepage.user_click_on_EntryTime_PM_RadioButtonMethod();
+            parkingCalculatorHomepage.user_Input_EntryDate_on_ChooseEntryDateandTimeFieldMethod();
             parkingCalculatorHomepage.user_input_ExitTime_on_ChooseLeavingDateandTimeField("14:00");
             parkingCalculatorHomepage.user_Click_on_ExitTime_AM_Button();
             parkingCalculatorHomepage.user_input_ExitDate_on_ChooseLeavingDateandTimeField();
@@ -120,9 +120,9 @@ namespace AdamGoucherParkingCalculator.Test
         public void VerifythatWhenExitDateortimeisbeforeUserEntrydateortimeInput_SystemshoulddisplayAwarningmessageWarningMessage()
         {
             parkingCalculatorHomepage.userSelectShort_TermLot();
-            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeField("20:00");
-            parkingCalculatorHomepage.user_click_on_EntryTime_PM_RadioButton();
-            parkingCalculatorHomepage.user_Input_EntryDate_on_ChooseEntryDateandTimeField();
+            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeFieldMethod("20:00");
+            parkingCalculatorHomepage.user_click_on_EntryTime_PM_RadioButtonMethod();
+            parkingCalculatorHomepage.user_Input_EntryDate_on_ChooseEntryDateandTimeFieldMethod();
             parkingCalculatorHomepage.user_input_ExitTime_on_ChooseLeavingDateandTimeField("14:00");
             parkingCalculatorHomepage.user_Click_on_ExitTime_AM_Button();
             try

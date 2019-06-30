@@ -14,13 +14,13 @@ namespace AdamGoucherParkingCalculator.Main
     later we can re-use the user actions and use them to write new scripts*/
     {
         // Storing locator at the top so other class can have access to it and achieve reusability.
-        public By _choose_a_LotDropDown = By.Id("Lot");
-        public By _entry_Time_Field = By.Id("EntryTime");
-        public By _PM_EntryTime_RadioButton = By.XPath("//input[@name='EntryTimeAMPM' and @value='PM']");
+        public By _choose_a_LotDropDown = By.CssSelector("Lot");
+        public By _entry_Time_Field = By.CssSelector("EntryTime");
+        public By _PM_EntryTime_RadioButton = By.CssSelector("//input[@name='EntryTimeAMPM' and @value='PM']");
         public By _AM_EntryTime_RadioButton = By.XPath("//input[@name='EntryTimeAMPM' and @value='AM']");
         public By _entry_Date_Field = By.Id("EntryDate");
         public By _exit_Time_Field = By.Id("ExitTime");
-        public By _PM_ExitTime_RadioButton = By.XPath("//input[@name='ExitTimeAMPM' and @value='PM' ]");
+        public By _PM_ExitTime_RadioButton = By.CssSelector("//input[@name='ExitTimeAMPM' and @value='PM' ]");
         public By _AM_ExitTime_RadioButton = By.XPath("//input[@name='ExitTimeAMPM' and @value='AM' ]");
         public By _exit_Date_Field = By.Id("ExitDate");
         public By _Calculate_SubmitButton = By.XPath("//input[@value='Calculate' or @type='submit']");
@@ -36,20 +36,20 @@ namespace AdamGoucherParkingCalculator.Main
         }
 
         // function to clear the default time and input a new time on the entry time field.
-        public void user_input_Entrytime_on_ChooseEntryDateAndTimeField(String text)
+        public void user_input_Entrytime_on_ChooseEntryDateAndTimeFieldMethod(String text)
         {
             clearElement(_entry_Time_Field);          
             sendKeysMethod(_entry_Time_Field,(text));           
         }
 
         // function to select PM radio button from the entry time field.
-        public void user_click_on_EntryTime_PM_RadioButton()
+        public void user_click_on_EntryTime_PM_RadioButtonMethod()
         {
             clickElementMethod(_PM_EntryTime_RadioButton);
         }
 
         // function to input a date on the entry date field.
-        public void user_Input_EntryDate_on_ChooseEntryDateandTimeField()
+        public void user_Input_EntryDate_on_ChooseEntryDateandTimeFieldMethod()
         {
             clearElement(_entry_Date_Field);
             sendKeysMethod(_entry_Date_Field,("05/14/2019"));
