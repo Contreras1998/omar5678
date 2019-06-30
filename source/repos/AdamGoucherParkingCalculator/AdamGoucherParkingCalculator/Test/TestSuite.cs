@@ -116,12 +116,26 @@ namespace AdamGoucherParkingCalculator.Test
             }
         }
 
+        [Test, Order(4)]
+        public void VerifythatWhenExitDateortimeisbeforeUserEntrydateortimeInput_SystemshoulddisplayAwarningmessageWarningMessage()
+        {
+            parkingCalculatorHomepage.userSelectShort_TermLot();
+            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeField("20:00");
+            parkingCalculatorHomepage.user_click_on_EntryTime_PM_RadioButton();
+            parkingCalculatorHomepage.user_Input_EntryDate_on_ChooseEntryDateandTimeField();
+            parkingCalculatorHomepage.user_input_ExitTime_on_ChooseLeavingDateandTimeField("14:00");
+            parkingCalculatorHomepage.user_Click_on_ExitTime_AM_Button();
+            try
+            {
+                string expectedResult = "ERROR! YOUR EXIT DATE OR TIME IS BEFORE YOUR ENTRY DATE OR TIME";
+                string actualResult = getText(parkingCalculatorHomepage._ExitDate_Before_EntryDate_WarningMessage);
 
-        
-
-       
-
-        
+                Assert.AreEqual(expectedResult, actualResult, "Assertion failed");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Assertion failed");
+            }
+        }
     }
-
 }
