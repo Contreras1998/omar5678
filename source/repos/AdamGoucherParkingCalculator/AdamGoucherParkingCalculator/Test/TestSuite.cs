@@ -114,110 +114,14 @@ namespace AdamGoucherParkingCalculator.Test
             {
                 Console.WriteLine("Assertion failed");
             }
-            
-
-        }
-
-        [Test, Order(4)]
-        public void getAPrice()
-        {
-            parkingCalculatorHomepage.userSelectShort_TermLot();
-        }
-
-        [Test, Order(5)]
-        public void changeEntryTime()
-        {
-            parkingCalculatorHomepage.userSelectShort_TermLot();
-            parkingCalculatorHomepage.user_input_Entrytime_on_ChooseEntryDateAndTimeField("10:00");
-        }
-
-        [Test, Order(6)]
-        public void changeExitTime()
-        {
-
-            // click on go submmit button
-            //clickElementMethod(By.XPath("//input[@name='proceed' and @value='Go']"));
-            // alter will pop up
-            //IAlert _alert = driver.SwitchTo().Alert();
-            //string warningPopUpMessage = _alert.Text;
-            // print pop up warning string
-            //Console.WriteLine(warningPopUpMessage);
-            // dismiss pop up
-            //_alert.Dismiss();
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            IWebElement Element = driver.FindElement(By.XPath("//a[text()='eBay companies']"));
-            js.ExecuteScript("arguments[0].scrollIntoView();", Element);
-            clickElementMethod(By.XPath("//span[text()='List for Free and Make Even More Money']"));
-            
-
-
-        }
-
-        [Test, Order(7)]
-        public void changeExitTime2()
-        {
-            clickElementMethod(By.Id("menu1"));
-            IList<IWebElement> ifConditionalDropdownMenu = driver.FindElements(By.XPath("(//ul[@class='dropdown-menu test'])[1]"));
-            List<string> actualOrder = new List<string>();
-
-            foreach (IWebElement ele in ifConditionalDropdownMenu)
-            {
-                if (ele.Text == "CSS")
-                {
-                    ele.Click();
-                }
-                
-            }
-            Console.WriteLine(ifConditionalDropdownMenu.Count);
-
-
-
-        }
-
-        [Test, Order(8)]
-        public void changeExitTime22()
-        {
-            clickElementMethod(By.Id("menu1"));
-            IList<IWebElement> ifConditionalDropdownMenu = driver.FindElements(By.XPath("(//ul[@class='dropdown-menu test'])[1]"));
-            List<string> actualOrder = new List<string>();
-
-            foreach (IWebElement ele in ifConditionalDropdownMenu)
-            {
-                if (ele.Text == "CSS")
-                {
-                    ele.Click();
-                }
-
-            }
-            Console.WriteLine(ifConditionalDropdownMenu.Count);
-            Console.WriteLine("test1");
-
-
-
         }
 
 
-        [Test, Order(11)]
-        public void AddNotesLink()
-        {
-            clickElementMethod(By.Id("menu1"));
-            IList<IWebElement> ifConditionalDropdownMenu = driver.FindElements(By.XPath("(//ul[@class='dropdown-menu test'])[1]"));
-            List<string> actualOrder = new List<string>();
+        
 
-            foreach (IWebElement ele in ifConditionalDropdownMenu)
-            {
-                if (ele.Text == "CSS")
-                {
-                    ele.Click();
-                }
+       
 
-            }
-            Console.WriteLine(ifConditionalDropdownMenu.Count);
-            Console.WriteLine("test1");
-
-
-
-        }
+        
     }
 
 }
