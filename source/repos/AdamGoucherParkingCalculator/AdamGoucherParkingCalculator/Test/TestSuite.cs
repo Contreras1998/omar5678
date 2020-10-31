@@ -54,7 +54,7 @@ namespace AdamGoucherParkingCalculator.Test
                 {"RS4 Avant 2019", "Audi"},
                 {"RS6 Avant 2019", "Audi"},
                 {"P1", "Maclaren"},
-                {"Audi", "Maclaren"}
+                {"Jeep", "Maclaren"}
             };
 
             // Get cars models which brand is Bmw
