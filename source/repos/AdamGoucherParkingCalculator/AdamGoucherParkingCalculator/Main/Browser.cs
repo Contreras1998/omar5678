@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Opera;
@@ -10,11 +11,12 @@ using System.Text;
 
 namespace AdamGoucherParkingCalculator.Main
 {
-    class BrowserSelector : BasePage
+    public class Browser
     {
         // I am creating a class so I can select in runtime in which browser I want to execute my script.
+        public static IWebDriver driver;
         String browsername = "firefox"; //The browser enviroment will depend on the value of browsername.
-        String webURL = "http://adam.goucher.ca/parkcalc/";
+        String webURL = "https://www.ebay.co.uk/";
         
         public void browser_Selector()
         {

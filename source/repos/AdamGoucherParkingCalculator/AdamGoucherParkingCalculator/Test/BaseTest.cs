@@ -20,7 +20,7 @@ namespace AdamGoucherParkingCalculator.Test
         // I am creating an object of Selector class so I can pass the value of browser here.
         // if browser == chrome then the block of code inside that method will be executed here.
 
-        BrowserSelector selector = new BrowserSelector();
+        Browser selector = new Browser();
 
         [SetUp]
         public void set_Up()
